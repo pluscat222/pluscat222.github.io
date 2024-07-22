@@ -6,27 +6,28 @@
 <meta name="google-site-verification" content="ozhjCN1gONyafeLUH_4eT8GGesnxTPuguCuqADLJ_P4" />
 <meta name="google-site-verification" content="1YfFmkFTIOnYcj98tTeTi5LFgzRz_Fxd_Z-Ncm9aszg" />
 <meta charset="utf-8">
-<title>在 Hexo 遇到的各種疑難雜症 - plusC's blog</title>
+<title>Unminify - writeup - plusC's blog</title>
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<link rel="canonical" href="https://pluscat.me/%E5%9C%A8-Hexo-%E9%81%87%E5%88%B0%E7%9A%84%E7%96%91%E9%9B%A3%E9%9B%9C%E7%97%87/">
+<link rel="canonical" href="https://pluscat.me/Unminify-writeup/">
 <link rel="icon" type="image/x-icon" href="https://i.imgur.com/U3t7GQ8.png">
 
-<meta name="description" content="由於第一次使用 Hexo 架站，然後又沒有仔細去看官方文件 &amp; 其他人的文章，所以就遇到一堆問題… 如何更改他人寫好的模板 在安裝好他人的模板下來後通常會想要改一些細節變得更客製化, 像是更改字體、背景顏色、dark mode 等等 更改的位置通常是在 node_modules\模板資料夾\_config.yml 裡 像我的就是在 node_modules\hexo-theme-insid">
+<meta name="description" content="題目  解題過程 題目說它壓縮了程式碼 嗯…沒什麼想法… 打開網頁後看到它說 “如果正在閱讀本文，則表示您的瀏覽器已成功收到 flag”  那就用 dev-tool 去看一下程式碼  結果就看到 flag 包在一層又一層的程式當中~(&#x2F;&#x2F;●⁰౪⁰●)&#x2F;&#x2F; picoCTF{pr3tty_c0d3_51d374f0}">
 <meta property="og:type" content="website">
-<meta property="og:title" content="在 Hexo 遇到的各種疑難雜症">
-<meta property="og:url" content="https://pluscat.me/%E5%9C%A8-Hexo-%E9%81%87%E5%88%B0%E7%9A%84%E7%96%91%E9%9B%A3%E9%9B%9C%E7%97%87/index.html">
+<meta property="og:title" content="Unminify - writeup">
+<meta property="og:url" content="https://pluscat.me/Unminify-writeup/index.html">
 <meta property="og:site_name" content="plusC&#39;s blog">
-<meta property="og:description" content="由於第一次使用 Hexo 架站，然後又沒有仔細去看官方文件 &amp; 其他人的文章，所以就遇到一堆問題… 如何更改他人寫好的模板 在安裝好他人的模板下來後通常會想要改一些細節變得更客製化, 像是更改字體、背景顏色、dark mode 等等 更改的位置通常是在 node_modules\模板資料夾\_config.yml 裡 像我的就是在 node_modules\hexo-theme-insid">
+<meta property="og:description" content="題目  解題過程 題目說它壓縮了程式碼 嗯…沒什麼想法… 打開網頁後看到它說 “如果正在閱讀本文，則表示您的瀏覽器已成功收到 flag”  那就用 dev-tool 去看一下程式碼  結果就看到 flag 包在一層又一層的程式當中~(&#x2F;&#x2F;●⁰౪⁰●)&#x2F;&#x2F; picoCTF{pr3tty_c0d3_51d374f0}">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://i.imgur.com/s4Xzklx.jpeg">
-<meta property="article:published_time" content="2023-08-27T05:57:29.000Z">
-<meta property="article:modified_time" content="2023-08-27T09:47:43.064Z">
+<meta property="og:image" content="https://i.imgur.com/jz0pQeb.jpeg">
+<meta property="article:published_time" content="2024-07-22T15:14:00.000Z">
+<meta property="article:modified_time" content="2024-07-22T15:26:14.919Z">
 <meta property="article:author" content="plusC">
-<meta property="article:tag" content="Hexo">
-<meta property="article:tag" content="疑難雜症">
+<meta property="article:tag" content="picoCTF">
+<meta property="article:tag" content="Web">
+<meta property="article:tag" content="picoCTF 2024">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.imgur.com/s4Xzklx.jpeg">
+<meta name="twitter:image" content="https://i.imgur.com/jz0pQeb.jpeg">
 
 
 <!-- hexo injector head_end start --><style is="theme">html{--inside-accent-color:#2a2b33;--inside-foreground-color:#363636;--inside-border-color:#e0e0e0;--inside-background:#F7F7F7;--inside-sidebar-background:#2a2b33;--inside-card-background:#FFFFFF;--inside-font-base:'Josefin Sans','PingFang SC',microsoft yahei;--inside-font-logo:Libre Baskerville,'Josefin Sans','PingFang SC',microsoft yahei;--inside-font-menu:IM Fell DW Pica SC,'Josefin Sans','PingFang SC','Microsoft YaHei',microsoft yahei;--inside-font-heading:ADLaM Display,'Josefin Sans','PingFang SC',microsoft yahei;--inside-font-label:ADLaM Display,'Josefin Sans','PingFang SC',microsoft yahei;--inside-font-code:Inconsolata,monospace;--inside-font-print:-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;--inside-content-width:660px;--inside-highlight-00:#ffffff;--inside-highlight-01:#e0e0e0;--inside-highlight-02:#f3f6f7;--inside-highlight-03:#95a5b3;--inside-highlight-04:#363636;--inside-highlight-05:#262b2f;--inside-highlight-06:#000000;--inside-highlight-07:#000000;--inside-highlight-08:#5d6c7b;--inside-highlight-09:#40464a;--inside-highlight-0a:#2980b9;--inside-highlight-0b:#be516e;--inside-highlight-0c:#237dac;--inside-highlight-0d:#944770;--inside-highlight-0e:#239371;--inside-highlight-0f:#edf0f3;--inside-card-color:#FFFFFF;--inside-accent-color-005:rgba(42,43,51,.05);--inside-accent-color-01:rgba(42,43,51,.1);--inside-accent-color-02:rgba(42,43,51,.2);--inside-accent-color-04:rgba(42,43,51,.4);--inside-accent-color-08:rgba(42,43,51,.8)}</style><script src="/theme.9ecc9ab1.js"></script><link href="//fonts.googleapis.com/css?family=Libre+Baskerville|ADLaM+Display|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet"></link><link href="/styles.91e7dfca63c7c151daa6.css" rel="stylesheet"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
