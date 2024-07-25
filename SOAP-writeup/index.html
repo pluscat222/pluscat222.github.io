@@ -6,18 +6,22 @@
 <meta name="google-site-verification" content="ozhjCN1gONyafeLUH_4eT8GGesnxTPuguCuqADLJ_P4" />
 <meta name="google-site-verification" content="1YfFmkFTIOnYcj98tTeTi5LFgzRz_Fxd_Z-Ncm9aszg" />
 <meta charset="utf-8">
-<title>Tag : portswigger - plusC's blog</title>
+<title>SOAP - writeup - plusC's blog</title>
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<link rel="canonical" href="https://pluscat.me/tags/portswigger/">
+<link rel="canonical" href="https://pluscat.me/SOAP-writeup/">
 <link rel="icon" type="image/x-icon" href="https://i.imgur.com/U3t7GQ8.png">
 
+<meta name="description" content="題目  解題過程 題目說因為網頁沒有做安全評估，問我們有沒有辦法拿到 &#x2F;etc&#x2F;passwd 本來想說應該是 directory traversal 結果好像不是 想了一下沒有頭緒就看了提示：  提示說是 XXE (XML external entity Injection) 超出知識範圍了，去惡補一下zzz 惡補完後回到網頁 可以發現每個 Detail button 上面都有一個隱藏的 inpu">
 <meta property="og:type" content="website">
-<meta property="og:title" content="plusC&#39;s blog">
-<meta property="og:url" content="https://pluscat.me/tags/portswigger/index.html">
+<meta property="og:title" content="SOAP - writeup">
+<meta property="og:url" content="https://pluscat.me/SOAP-writeup/index.html">
 <meta property="og:site_name" content="plusC&#39;s blog">
+<meta property="og:description" content="題目  解題過程 題目說因為網頁沒有做安全評估，問我們有沒有辦法拿到 &#x2F;etc&#x2F;passwd 本來想說應該是 directory traversal 結果好像不是 想了一下沒有頭緒就看了提示：  提示說是 XXE (XML external entity Injection) 超出知識範圍了，去惡補一下zzz 惡補完後回到網頁 可以發現每個 Detail button 上面都有一個隱藏的 inpu">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://i.imgur.com/jz0pQeb.jpeg">
+<meta property="article:published_time" content="2024-07-25T12:59:31.000Z">
+<meta property="article:modified_time" content="2024-07-25T13:29:03.348Z">
 <meta property="article:author" content="plusC">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.imgur.com/jz0pQeb.jpeg">
