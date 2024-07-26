@@ -6,19 +6,26 @@
 <meta name="google-site-verification" content="ozhjCN1gONyafeLUH_4eT8GGesnxTPuguCuqADLJ_P4" />
 <meta name="google-site-verification" content="1YfFmkFTIOnYcj98tTeTi5LFgzRz_Fxd_Z-Ncm9aszg" />
 <meta charset="utf-8">
-<title>plusC's blog</title>
+<title>More SQLi - writeup - plusC's blog</title>
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<link rel="canonical" href="https://pluscat.me/">
+<link rel="canonical" href="https://pluscat.me/More-SQLi-writeup/">
 <link rel="icon" type="image/x-icon" href="https://i.imgur.com/U3t7GQ8.png">
 
+<meta name="description" content="題目  解題過程 首先看到登入畫面  隨意輸入後可以看到它直接將 sql 語句印出來  語句是先檢查密碼 所以密碼直接試試看最經典的 payload：&#39;or&#39;1&#39;&#x3D;&#39;1&#39;-- 帳號就隨便打 就成功登入了 登入看到有一個查詢的 table，這邊我卡了蠻久的  後來就放棄去看提示啦  提示寫說是 SQLite 有關的 injection 所以就去查了一下 SQLite 的 cheatsheet SEL">
 <meta property="og:type" content="website">
-<meta property="og:title" content="plusC&#39;s blog">
-<meta property="og:url" content="https://pluscat.me/index.html">
+<meta property="og:title" content="More SQLi - writeup">
+<meta property="og:url" content="https://pluscat.me/More-SQLi-writeup/index.html">
 <meta property="og:site_name" content="plusC&#39;s blog">
+<meta property="og:description" content="題目  解題過程 首先看到登入畫面  隨意輸入後可以看到它直接將 sql 語句印出來  語句是先檢查密碼 所以密碼直接試試看最經典的 payload：&#39;or&#39;1&#39;&#x3D;&#39;1&#39;-- 帳號就隨便打 就成功登入了 登入看到有一個查詢的 table，這邊我卡了蠻久的  後來就放棄去看提示啦  提示寫說是 SQLite 有關的 injection 所以就去查了一下 SQLite 的 cheatsheet SEL">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://i.imgur.com/jz0pQeb.jpeg">
+<meta property="article:published_time" content="2024-07-26T15:35:00.000Z">
+<meta property="article:modified_time" content="2024-07-26T16:16:51.640Z">
 <meta property="article:author" content="plusC">
+<meta property="article:tag" content="picoCTF">
+<meta property="article:tag" content="Web">
+<meta property="article:tag" content="picoCTF 2023">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.imgur.com/jz0pQeb.jpeg">
 
